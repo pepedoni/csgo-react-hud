@@ -31,11 +31,11 @@ export default class Money extends React.PureComponent<Props> {
                     <div className="value">${this.props.loss}</div>
                 </div>
                 <div className="money_container">
-                    <div className="title">Team Money</div>
+                    <div className="title">Dispónivel</div>
                     <div className="value">${this.props.money}</div>
                 </div>
                 <div className="money_container">
-                    <div className="title">Equipment Value</div>
+                    <div className="title">Comprou</div>
                     <div className="value">${this.props.equipment}</div>
                 </div>
             </div>

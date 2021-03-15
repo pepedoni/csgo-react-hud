@@ -7,9 +7,11 @@ import Bomb from "./../Indicators/Bomb";
 import Defuse from "./../Indicators/Defuse";
 
 interface IProps {
+  id: number,
   player: Player,
   isObserved: boolean,
   isFreezetime: boolean,
+  extra?: Object
 }
 export default class PlayerBox extends React.Component<IProps> {
   render() {
@@ -22,7 +24,7 @@ export default class PlayerBox extends React.Component<IProps> {
     return (
       <div className={`player ${player.state.health === 0 ? "dead" : ""} ${this.props.isObserved ? 'active' : ''}`}>
         <div className="player_data">
-          <Avatar steamid={player.steamid} height={57} width={57} showSkull={false}/>
+          <Avatar steamid={player.steamid} height={57} width={57} showSkull={false} slot={this.props.id}/>
           <div className="dead-stats">
             <div className="labels">
               <div className="stat-label">K</div>

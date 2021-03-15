@@ -1,7 +1,7 @@
 {
-    "name":"Lexogrine HUD",
-    "version":"1.9.1",
-    "author":"Lexogrine",
+    "name":"Pepedo Hud",
+    "version":"1.0.0",
+    "author":"Pepedoni",
     "legacy": false,
     "radar": true,
     "killfeed": true,

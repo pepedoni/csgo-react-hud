@@ -14,18 +14,18 @@ function utilityState(amount: number) {
     return "Full";
   }
   if (amount > 14) {
-    return "Great";
+    return "Otimo";
   }
   if (amount > 9) {
-    return "Good";
+    return "Bom";
   }
   if (amount > 5) {
-    return "Low";
+    return "Baixo";
   }
   if (amount > 0) {
-    return "Poor";
+    return "Nenhum";
   }
-  return "None";
+  return "Nenhum";
 }
 
 function utilityColor(amount: number) {
@@ -93,7 +93,7 @@ export default class SideBox extends React.Component<Props> {
         return (
             <div className={`utilitybox ${this.props.side || ''} ${this.props.show ? "show" : "hide"}`}>
                 <div className="title_container">
-                    <div className="title">Utility Level -&nbsp;</div>
+                    <div className="title">Nivel de Utilitários -&nbsp;</div>
                     <div className="subtitle" style={{color: utilityColor(total)}}>{utilityState(total)}</div>
                 </div>
                 <div className="grenades_container">

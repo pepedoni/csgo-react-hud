@@ -230,18 +230,17 @@
 }
 
 #cameraFeed {
-    width: 150px;
-    height: 150px;
     overflow: hidden;
     position: absolute;
-    transform: scale(0.94);
     left: 0px;
-    bottom: 0;
     transform-origin: bottom left;
-    iframe {
+    img {
+        height: 130px;
+        width: 130px;
+        top: 10px;
+        margin-bottom: 20px;
+        border-radius: 0%;
         position: relative;
         border: none;
-        width: 750px;
-        height: 300px;
     }
 }

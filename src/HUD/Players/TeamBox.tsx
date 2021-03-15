@@ -15,11 +15,13 @@ export default class TeamBox extends React.Component<Props> {
   render() {
     return (
       <div className={`teambox ${this.props.team.side} ${this.props.side}`}>
-        {this.props.players.map(player => <Player
+        {this.props.players.map((player, index) => <Player
+          extra={player.extra}
           key={player.steamid}
           player={player}
           isObserved={!!(this.props.current && this.props.current.steamid === player.steamid)}
           isFreezetime={this.props.isFreezetime}
+          id={index}
         />)}
       </div>
     );
