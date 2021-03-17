@@ -37,10 +37,9 @@ export default class Avatar extends React.Component<IProps, IState> {
     }
     const slot = this.props.slot === 0 ? 10 : this.props.slot || 1;
 
-    const leftPosition = - 150*((slot-1)%5);
-    const topPosition = slot > 5 ? -150 : 0;
     return (
       <div className={`avatar`}>
+        {webcamurl}
           {
             (this.state.enableCams && webcamurl) ? <div  id="cameraFeed" style={{ display: enableCams ? 'block' : 'none'}}><img src={webcamurl}/></div> 
             : this.props.showSkull ? <Skull height={this.props.height} width={this.props.width} /> : <img src={avatarData.url} height={this.props.height} width={this.props.width} alt={'Avatar'} />
